@@ -4,7 +4,10 @@ public class question2 {
     public static boolean isPalindrome(String s) {
         StringBuilder newString = new StringBuilder();
         for (char c : s.toCharArray()) {
-            if (Character.isLetterOrDigit(c)) {
+            if(Character.isLetter(c)) {
+                newString.append(Character.toLowerCase(c));
+            }
+            else if(Character.isDigit(c)) {
                 newString.append(Character.toLowerCase(c));
             }
         }
